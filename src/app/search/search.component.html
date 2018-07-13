@@ -1,26 +1,29 @@
 <div class="container">
 
         <div class="row">
+            <div class="col-sm">
+            
+              </div>
 
           <div class="col-sm">
                 
                         <div class="form-group">
-                          <label for="input-marks">Marks</label>
-                          <input type="number" class="form-control" [(ngModel)]="Mark" id="input-marks" placeholder="Marks">
+                          <label for="input-marks" class="float-right">المجموع بالدرجات</label>
+                          <input type="number" class="form-control" [(ngModel)]="Mark" id="input-marks" placeholder="المجموع">
                         </div>
                 
                         <div class="form-group">
-                          <label for="input-sections">Sections</label>
+                          <label for="input-sections" class="float-right">القسم</label>
                           <select class="form-control" id="input-sections" [(ngModel)]="inputoptions" >
-                            <option value="Science boys">Science Boys</option>
-                            <option value="Literature boys">Literature Boys</option>
-                            <option value="Literature girls">Literature Girls</option>
-                            <option value="Science girls">Science Girls</option>
-                            <option value="Islamic section">Islamic Section</option>
+                            <option value="Science boys">علوم بنين</option>
+                            <option value="Literature boys">ادبي بنين</option>
+                            <option value="Literature girls">ادبي بنات</option>
+                            <option value="Science girls">علوم بنات</option>
+                            <option value="Islamic section">شعبة إسلاميه</option>
                           </select>
                         </div>
 
-                        <button type="button" class="btn btn-primary" (click)="Searchbutton()" >Search</button>
+                        <button type="button" class="btn btn-primary" (click)="Searchbutton()" >بحث</button>
                
           </div>
           <div class="col-sm">
