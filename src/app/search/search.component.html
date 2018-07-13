@@ -1,0 +1,42 @@
+<div class="container">
+
+        <div class="row">
+
+          <div class="col-sm">
+                
+                        <div class="form-group">
+                          <label for="input-marks">Marks</label>
+                          <input type="number" class="form-control" [(ngModel)]="Mark" id="input-marks" placeholder="Marks">
+                        </div>
+                
+                        <div class="form-group">
+                          <label for="input-sections">Sections</label>
+                          <select class="form-control" id="input-sections" [(ngModel)]="inputoptions" >
+                            <option value="Science boys">Science Boys</option>
+                            <option value="Literature boys">Literature Boys</option>
+                            <option value="Literature girls">Literature Girls</option>
+                            <option value="Science girls">Science Girls</option>
+                            <option value="Islamic section">Islamic Section</option>
+                          </select>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" (click)="Searchbutton()" >Search</button>
+               
+          </div>
+          <div class="col-sm">
+            
+          </div>
+        </div>
+
+</div><!--container-->
+
+<br>
+<!--Lists-->
+<div class="container">
+<ul class="list-group" *ngIf="this.boolList">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let item of this.availableCollages">
+          {{item.collage}}
+          <span class="badge badge-primary badge-pill">{{item.mark}}</span>
+        </li>
+</ul>
+</div>
